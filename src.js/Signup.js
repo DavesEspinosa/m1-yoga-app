@@ -17,26 +17,45 @@ class Signup {
   //se sacará el texto que viene de cada input, almacenandolo en una variable ( desde el value de cada input)
   handleEmailInput = (event) => {
     const email = event.target.value;
-    console.log("email", email);
+    validator.validateValidEmail(email);
+    const errors = validator.getErrors;
+    if (!errors.invalidEmailError) {
+      validator.validateUniqueEmail(email);
+    }
+
+    this.setErrorsMessage();
   };
 
-  handleAgeInput = (event) => {
+  /*  handleAgeInput = (event) => {
     const age = event.target.value;
     console.log("age", age);
-  };
+  }; */
+  //Plantear como mostrar éste mensaje.
+  showSomethingAboutAge = () => {};
 
   handlePasswordInput = (event) => {
     const password = event.target.value;
-    console.log("password", password);
+    const passwordRepeat = this.repeatPasswordInput.value;
+
+    validator.validatePassword(password);
+    validator.validateRepeatPassword(password, passwordRepeat);
+
+    this.setErrorsMessage();
   };
 
   handleRepeatPasswordInput = (event) => {
-    const repeatPassword = event.target.value;
-    console.log("repeatPassword", repeatPassword);
+    const passwordRepeat = event.target.value;
+    const password = this.passwordInput.value;
+    //Para poder cmabiar el password sobre la marcha, y que siga marcando errores si lo hubiera.
+
+    validator.validatePassword(password);
+    validator.validateRepeatPassword(password, passwordRepeat);
+
+    this.setErrorsMessage();
   };
 
   saveData = (event) => {
-      //Para evitar el submit
+    //Para evitar el submit
     event.preventDefault();
     //recoger los valores de cada input
     const name = this.nameInput.value;
@@ -73,6 +92,24 @@ class Signup {
     );
 
     this.buttonInput.addEventListener("click", this.saveData);
+  };
+
+  //Se muestran mensajes que viene del validator.errors.
+  setErrorsMessage = () => {
+    //vacia los errores paar que no se sumen.
+    this.errorsWrapper.innerHTML = "";
+
+    const erorsObj = validator.getErrors();
+    //convertir el objeto a un array
+    const errorsStringsArr = Object.values(erorsObj);
+    errorsStringsArr.forEach((errorStr) => {
+      const errorMessageP = document.createElement("p");
+      // errorMessageP.classList.add or remove
+      errorMessageP.innerHTML = errorStr;
+
+      //Se pone dentro del DOM- Se añade al div .message-container
+      this.errorsWrapper.appendChild(errorMessageP);
+    });
   };
 }
 
