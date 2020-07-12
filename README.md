@@ -22,7 +22,7 @@ The **MVP** will cover the following:
 
 ## Backlog
 
-Extra features you want to add once your MVP is done
+-Do the sign up and Log in with modal.
 
 ## Wireframes
 
