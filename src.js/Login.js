@@ -2,10 +2,10 @@
 
 class Login {
   constructor() {
-    this.emailInput = document.querySelector("#email");
-    this.passwordInput = document.querySelector("#password");
+    this.emailInput = document.querySelector("#modalLRInput10");
+    this.passwordInput = document.querySelector("#modalLRInput11");
 
-    this.loginButton = document.querySelector("#login-button");
+    this.loginButton = document.querySelector("#login");
     this.messageContainer = document.querySelector(
       ".message-container"
     );
@@ -44,7 +44,7 @@ class Login {
       message.classList.add("correct-message");
     } else {
       // si el inicio de sesión no se ha realizado correctamente
-      message.innerHTML = "el email o/y password son incorectos";
+     alert(/* message.innerHTML =  */`I know you can do it, keep trying`) 
     }
 
     this.messageContainer.appendChild(message);

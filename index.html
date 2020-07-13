@@ -21,10 +21,7 @@
       crossorigin="anonymous"
     />
     <!-- google fonts, importar varias, y luego solamente citarlas en font-family -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Tangerine:wght@700&display=swap" rel="stylesheet">
 
     <!-- Proper CSS -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -137,6 +134,7 @@
                       <input
                         type="email"
                         id="modalLRInput10"
+                        placeholder="Email"
                         class="form-control form-control-sm validate"
                       />
                       <label
@@ -152,6 +150,7 @@
                       <input
                         type="password"
                         id="modalLRInput11"
+                        placeholder="*****"
                         class="form-control form-control-sm validate"
                       />
                       <label
@@ -162,10 +161,13 @@
                       >
                     </div>
                     <div class="text-center mt-2">
-                      <button class="btn btn-info">
+                      <button 
+                      type="submit"
+                      class="btn btn-info" id="login">
                         Log in <i class="fas fa-sign-in ml-1"></i>
                       </button>
                     </div>
+                    <div class="message-container"></div>
                   </div>
                   <!--Footer-->
                   <div class="modal-footer">
@@ -181,28 +183,30 @@
                 <!--/.Panel 7-->
 
                 <!--Panel 8-->
-                <div class="tab-pane fade" id="panel8" role="tabpanel"> 
+                <div class="tab-pane fade" id="panel8" role="tabpanel">
                   <!--Body-->
                   <div class="modal-body">
                     <div class="md-form form-sm mb-5">
-                      <i><img src="./images/guru.png" alt=""> </i>
+                      <i><img src="./images/guru.png" alt="" /> </i>
                       <input
-                        type="email"
+                        type="text"
+                        placeholder="Name"
                         id="modalLRInput12"
                         class="form-control form-control-sm validate"
                       />
-                      <label 
+                      <label
                         data-error="wrong"
                         data-success="right"
                         for="modalLRInput12"
-                        >Your Name </label
-                      >
+                        >Your Name
+                      </label>
                     </div>
 
                     <div class="md-form form-sm mb-5">
                       <i class="fas fa-envelope prefix"></i>
                       <input
-                        type="email"
+                        type="text"
+                        placeholder="Email"
                         id="modalLRInput13"
                         class="form-control form-control-sm validate"
                       />
@@ -218,6 +222,7 @@
                       <i class="fas fa-lock prefix"></i>
                       <input
                         type="password"
+                        placeholder="****"
                         id="modalLRInput14"
                         class="form-control form-control-sm validate"
                       />
@@ -233,6 +238,7 @@
                       <i class="fas fa-lock prefix"></i>
                       <input
                         type="password"
+                        placeholder="****"
                         id="modalLRInput15"
                         class="form-control form-control-sm validate"
                       />
@@ -243,22 +249,26 @@
                         >Repeat password</label
                       >
                     </div>
-
+                    
                     <div class="text-center form-sm mt-2">
-                      <button class="btn btn-info">
+                      <button type="submit" class="btn btn-info" 
+                       id="signup-button">
                         Sign up <i class="fas fa-sign-in ml-1"></i>
                       </button>
+                      <div class="message-container"></div>
                     </div>
+                    
                   </div>
                   <!--Footer-->
                   <div class="modal-footer">
                     <div class="options text-right">
                       <p class="pt-1">
                         Already have an account?
-                        <a href="#" class="blue-text">Log In</a>
+                        <a href="" class="blue-text">Log In</a>
                       </p>
                     </div>
                     <button
+                    
                       type="button"
                       class="btn btn-outline-info waves-effect ml-auto"
                       data-dismiss="modal"
@@ -369,21 +379,33 @@
         <div>
           <h3>Some text or title, will see</h3>
         </div>
-        <div>
-          <div>
-            <img src="" alt="someshit" />
-            <h4>Title</h4>
-            <p>What we can do</p>
+        <div id="tips">
+          <div >
+            <img src="/images/ejercicio.png" alt="someshit" />
+            <h4>POR QUÉ</h4>
+            <p>
+              Vivimos una vida basada en la insatisfacción constante, nos
+              importa más el pasado y el futuro que el presente. Esto nos
+              provoca angustia y un gran estrés, que no nos permite ser felices.
+            </p>
           </div>
           <div>
-            <img src="" alt="moreshit" />
-            <h4>title</h4>
-            <p>How to do it</p>
+            <img src="/images/guru.png" alt="moreshit" />
+            <h4>CÓMO</h4>
+            <p>
+              Aprender a vivir de una forma más consciente, a través de la
+              práctica de métodos que te ayudan a conocerte mejor, respirar
+              mejor, estar más sano, vivir en el ahora y una vida más natural.
+            </p>
           </div>
           <div>
-            <img src="" alt="oh man" />
-            <h4>title</h4>
-            <p>why to do it</p>
+            <img src="/images/meditacion.png" alt="oh man" />
+            <h4>QUÉ</h4>
+            <p>
+              Tras 20 años de práctica he descubierto que el sistema de Yoga
+              Vinyasa Krama es, para mí, la mejor herramienta de desarrollo
+              personal, gracias a la que te sentirás más plena, sana y serena.
+            </p>
           </div>
         </div>
         <div>
@@ -422,10 +444,6 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.663771779815!2d2.4324167509966346!3d41.684604379136104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4ccef5d209c21%3A0x61207a6d7ff38346!2sDhamma%20Neru!5e0!3m2!1ses!2ses!4v1594563210118!5m2!1ses!2ses"
             width="600"
             height="450"
-            frameborder="0"
-            allowfullscreen=""
-            aria-hidden="false"
-            tabindex="0"
           ></iframe>
         </div>
       </section>

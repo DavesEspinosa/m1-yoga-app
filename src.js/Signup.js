@@ -2,17 +2,17 @@
 
 class Signup {
   constructor() {
-    this.nameInput = document.querySelector("#name");
-    this.firstnameInput = document.querySelector("#firstname");
-    this.ageInput = document.querySelector("#age");
-    this.emailInput = document.querySelector("#email");
-    this.passwordInput = document.querySelector("#password");
-    this.repeatPasswordInput = document.querySelector(
-      "#repeat-password"
+    this.nameInput = document.getElementById("modalLRInput12");
+   
+   
+    this.emailInput = document.getElementById("modalLRInput13");
+    this.passwordInput = document.getElementById("modalLRInput14");
+    this.repeatPasswordInput = document.getElementById(
+      "modalLRInput15"
     );
 
-    this.buttonInput = document.querySelector("#signup-button");
-    this.errorsWrapper = document.querySelector(".message-container");
+    this.buttonInput = document.getElementById("signup-button");
+    this.errorsWrapper = document.getElementsByClassName("message-container");
   }
   //se sacará el texto que viene de cada input, almacenandolo en una variable ( desde el value de cada input)
   handleEmailInput = (event) => {
@@ -59,13 +59,13 @@ class Signup {
     event.preventDefault();
     //recoger los valores de cada input
     const name = this.nameInput.value;
-    const firstName = this.firstnameInput.value;
-    const age = this.ageInput.value;
+   /*  const firstName = this.firstnameInput.value;
+    const age = this.ageInput.value; */
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
     
 
-    const newUser = new User(name, firstName, age, email, password);
+    const newUser = new User(name, /* firstName, age, */ email, password);
 
     //Guardar nuevo usuario en localStorage_Invocar a saveNewUser
     db.saveNewUser(newUser);
@@ -73,15 +73,15 @@ class Signup {
     // Vaciar el form
 
     this.nameInput.value = "";
-    this.firstnameInput.value = "";
-    this.ageInput.value = "";
+   /*  this.firstnameInput.value = "";
+    this.ageInput.value = ""; */
     this.emailInput.value = "";
     this.passwordInput.value = "";
     this.repeatPasswordInput.value = "";
   };
 
   addListeners = () => {
-    this.ageInput.addEventListener("input", this.handleAgeInput);
+    /* this.ageInput.addEventListener("input", this.handleAgeInput); */
     this.emailInput.addEventListener("input", this.handleEmailInput);
     this.passwordInput.addEventListener(
       "input",
