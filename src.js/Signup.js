@@ -63,7 +63,7 @@ class Signup {
     const age = this.ageInput.value;
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
-    const repeatPassword = this.repeatPasswordInput.value;
+    
 
     const newUser = new User(name, firstName, age, email, password);
 
@@ -77,6 +77,7 @@ class Signup {
     this.ageInput.value = "";
     this.emailInput.value = "";
     this.passwordInput.value = "";
+    this.repeatPasswordInput.value = "";
   };
 
   addListeners = () => {

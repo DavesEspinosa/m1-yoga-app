@@ -1,0 +1,26 @@
+.modal-c-tabs .nav {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 992px) and (max-width: 1500px) {
+  .navbar {
+    height: 100px;
+  }
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+  .nav-item .nav-link {
+    font-size: 25px;
+  }
+}
+
+.mention {
+    background-color: aquamarine;
+}
