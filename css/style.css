@@ -16,11 +16,43 @@
     width: 35px;
     height: 35px;
   }
-  .nav-item .nav-link {
+  .nav-item .nav-link.access {
     font-size: 25px;
   }
 }
 
 .mention {
-    background-color: aquamarine;
+  background-color: aquamarine;
+}
+
+.modal-content {
+  background-color: rgba(76, 180, 163, 0.7);
+}
+
+.header_text-box {
+  background-image: url(./../images/faye-cornish-Uq3gTiPlqRo-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+.header_text {
+}
+.header_text-box p img {
+  width: 35px;
+  height: 35px;
+}
+
+.container img {
+  width: 35px;
+  height: 35px;
+}
+
+.advice h5 {
+  font-size: 26px;
+}
+
+.advice {
+  display: flex;
+  justify-content: space-around;
 }
