@@ -21,7 +21,10 @@
       crossorigin="anonymous"
     />
     <!-- google fonts, importar varias, y luego solamente citarlas en font-family -->
-    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Proper CSS -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -49,7 +52,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link access" href="./index.html"
                 >Home <span class="sr-only">(current)</span></a
               >
@@ -129,7 +132,7 @@
                 >
                   <!--Body-->
                   <div class="modal-body mb-1">
-                    <div class="md-form form-sm mb-5">
+                    <div class="md-form form-sm">
                       <i class="fas fa-envelope prefix"></i>
                       <input
                         type="email"
@@ -145,7 +148,7 @@
                       >
                     </div>
 
-                    <div class="md-form form-sm mb-4">
+                    <div class="md-form form-sm">
                       <i class="fas fa-lock prefix"></i>
                       <input
                         type="password"
@@ -161,9 +164,7 @@
                       >
                     </div>
                     <div class="text-center mt-2">
-                      <button 
-                      type="submit"
-                      class="btn btn-info" id="login">
+                      <button type="submit" class="btn btn-info" id="login">
                         Log in <i class="fas fa-sign-in ml-1"></i>
                       </button>
                     </div>
@@ -186,7 +187,7 @@
                 <div class="tab-pane fade" id="panel8" role="tabpanel">
                   <!--Body-->
                   <div class="modal-body">
-                    <div class="md-form form-sm mb-5">
+                    <div class="md-form form-sm">
                       <i><img src="./images/guru.png" alt="" /> </i>
                       <input
                         type="text"
@@ -202,7 +203,7 @@
                       </label>
                     </div>
 
-                    <div class="md-form form-sm mb-5">
+                    <div class="md-form form-sm">
                       <i class="fas fa-envelope prefix"></i>
                       <input
                         type="text"
@@ -218,7 +219,7 @@
                       >
                     </div>
 
-                    <div class="md-form form-sm mb-5">
+                    <div class="md-form form-sm">
                       <i class="fas fa-lock prefix"></i>
                       <input
                         type="password"
@@ -234,7 +235,7 @@
                       >
                     </div>
 
-                    <div class="md-form form-sm mb-4">
+                    <div class="md-form form-sm">
                       <i class="fas fa-lock prefix"></i>
                       <input
                         type="password"
@@ -249,26 +250,38 @@
                         >Repeat password</label
                       >
                     </div>
-                    
+
                     <div class="text-center form-sm mt-2">
-                      <button type="submit" class="btn btn-info" 
-                       id="signup-button">
+                      <button
+                        type="submit"
+                        class="btn btn-info"
+                        id="signup-button"
+                      >
                         Sign up <i class="fas fa-sign-in ml-1"></i>
                       </button>
-                      <div class="message-container"></div>
                     </div>
-                    
-                  </div>
-                  <!--Footer-->
-                  <div class="modal-footer">
-                    <div class="options text-right">
+                    <!--Footer-->
+                    <div class="modal-footer">
+                      <div class="options text-right">
+                        <div class="message-container1"></div>
+                      </div>
+                      <div class="options text-left"></div>
+                      <p class="pt-1">
+                        Already have an account?
+                        <a href="" class="blue-text">Log In</a>
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="options text-right">
+                        <div class="message-container1"></div>
+                      </div>
+                      <div class="options text-left"></div>
                       <p class="pt-1">
                         Already have an account?
                         <a href="" class="blue-text">Log In</a>
                       </p>
                     </div>
                     <button
-                    
                       type="button"
                       class="btn btn-outline-info waves-effect ml-auto"
                       data-dismiss="modal"
@@ -380,7 +393,7 @@
           <h3>Some text or title, will see</h3>
         </div>
         <div id="tips">
-          <div >
+          <div>
             <img src="/images/ejercicio.png" alt="someshit" />
             <h4>POR QUÉ</h4>
             <p>
@@ -433,10 +446,13 @@
             </li>
           </ul>
         </div>
-        <div>
-          <img src="" alt="someshit" />
-          <h4>Title</h4>
-          <p>Newsletter</p>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
         <div>
           <p>something abou the retirement</p>
@@ -452,7 +468,9 @@
         <a href="http://www.freepik.com/" title="Freepik">Freepik</a>
         from
         <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+        <a href="http://www.freepik.com">Designed by Hello-Pixel / Freepik/by user18526052</a>
       </section>
+
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

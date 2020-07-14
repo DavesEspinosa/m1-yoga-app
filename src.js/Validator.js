@@ -7,10 +7,10 @@ class Validator {
       "Respira profundamente, e introduce un correo válido";
     this.emailExistsError =
       "El correo ya existe, tómate unos minutos y recapacita";
-    this.passwordError =
+    this.passwordError = 
       "Como mínimo la contraseña debe contener 6 carácteres, ya casi lo tenemos :)";
     this.repeatPasswordError =
-      "Ambas contraseñas no coinciden, cuerpo y alma deben ser uno sólo";
+      "Ambas contraseñas no coinciden, cuerpo y alma deben ser uno solo";
 
     //objeto con los errores que se muestran al usuario
     this.errors = {
