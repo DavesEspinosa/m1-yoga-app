@@ -41,7 +41,7 @@ class Login {
       // si el usuario inicia la sesion con exito
       // agrega la clase para cambiar el color y sobrescribir el estilo anterior
       message.innerHTML = `Namasté, ${user.name}`;
-      message.classList.add("correct-message");
+      message.classList.add('alert' , 'alert-info');
     } else {
       // si el inicio de sesión no se ha realizado correctamente
      alert(/* message.innerHTML =  */`I know you can do it, keep trying`) 

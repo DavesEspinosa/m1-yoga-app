@@ -14,6 +14,13 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+     <!-- Iconos fontawesome -->
+     <link
+     rel="stylesheet"
+     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+     crossorigin="anonymous"
+   />
     <!-- google fonts, importar varias, y luego solamente citarlas en font-family -->
     <link
       href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Tangerine:wght@700&display=swap"
@@ -22,7 +29,7 @@
 
     <!-- Proper CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Iconos fontawesome -->
+   
     <title>Document</title>
   </head>
   <body>
@@ -68,17 +75,215 @@
                 data-target="#modalLRForm"
                 ><img class="icon" src="./images/grupo.png" alt=""
               /></a>
-              <!--   <a class="nav-link dropdown-toggle" href="">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./login.html">Log in</a>
-          </li> -->
             </li>
           </ul>
         </div>
       </nav>
-      <!-- background image with some message -->
-      
+      <!--Modal: Login / Register Form-->
+    <div
+    class="modal fade"
+    id="modalLRForm"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true" >
+    <div class="modal-dialog cascading-modal" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Modal cascading tabs-->
+        <div class="modal-c-tabs">
+          <!-- Nav tabs -->
+          <ul
+            class="nav nav-tabs md-tabs tabs-2 light-blue darken-3"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-toggle="tab"
+                href="#panel7"
+                role="tab"
+              >
+                <i class="fas fa-handshake mr-1"></i> Don't Hesitate</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#panel8"
+                role="tab"
+                ><i class="fa fa-users mr-1"></i> You're on the good path</a
+              >
+            </li>
+          </ul>
+
+          <!-- Tab panels -->
+          <div class="tab-content">
+            <!--Panel 7-->
+            <div
+              class="tab-pane fade in show active"
+              id="panel7"
+              role="tabpanel"
+            >
+              <!--Body-->
+              <div class="modal-body mb-1">
+                <div class="md-form form-sm">
+                  <i class="fas fa-envelope prefix"></i>
+                  <input
+                    type="email"
+                    id="modalLRInput10"
+                    placeholder="Email"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput10"
+                    >Your email</label
+                  >
+                </div>
+
+                <div class="md-form form-sm">
+                  <i class="fas fa-lock prefix"></i>
+                  <input
+                    type="password"
+                    id="modalLRInput11"
+                    placeholder="*****"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput11"
+                    >Your password</label
+                  >
+                </div>
+                <div class="text-center mt-2">
+                  <button type="submit" class="btn btn-info" id="login">
+                    Log in <i class="fas fa-sign-in ml-1"></i>
+                  </button>
+                </div>
+                <div class="message-container"></div>
+              </div>
+              <!--Footer-->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-outline-info waves-effect ml-auto"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            <!--/.Panel 7-->
+
+            <!--Panel 8-->
+            <div class="tab-pane fade" id="panel8" role="tabpanel">
+              <!--Body-->
+              <div class="modal-body">
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /> </i>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    id="modalLRInput12"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput12"
+                    >Your Name
+                  </label>
+                </div>
+
+                <div class="md-form form-sm">
+                  <i class="fas fa-envelope prefix"></i>
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    id="modalLRInput13"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput13"
+                    >Your email</label
+                  >
+                </div>
+
+                <div class="md-form form-sm">
+                  <i class="fas fa-lock prefix"></i>
+                  <input
+                    type="password"
+                    placeholder="****"
+                    id="modalLRInput14"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput14"
+                    >Your password</label
+                  >
+                </div>
+
+                <div class="md-form form-sm">
+                  <i class="fas fa-lock prefix"></i>
+                  <input
+                    type="password"
+                    placeholder="****"
+                    id="modalLRInput15"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput15"
+                    >Repeat password</label
+                  >
+                </div>
+
+                <div class="text-center form-sm mt-2">
+                  <button
+                    type="submit"
+                    class="btn btn-info"
+                    id="signup-button"
+                  >
+                    Sign up <i class="fas fa-sign-in ml-1"></i>
+                  </button>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <div class="message-container1"> </div>
+                  </div>
+                <div class="modal-footer">
+                  <div class="options text-left">
+                  <p class="pt-1">
+                    Already have an account?
+                    <a href="" class="blue-text">Log In</a>
+                  </p>
+               </div>
+                <button
+                  type="button"
+                  class="btn btn-outline-info waves-effect ml-auto"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            <!--/.Panel 8-->
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+    </header>
     <main>
       <div class="header-faqs">
         <h1>CAN I HELP YOU?</h1>
@@ -144,5 +349,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="./src.js/yogaApiService.js"></script>
+    <script src="./src.js/Database.js"></script>
+    <script src="./src.js/Login.js"></script>
+    <script src="./src.js/Signup.js"></script>
+    <script src="./src.js/User.js"></script>
+    <script src="./src.js/Validator.js"></script>
   </body>
 </html>

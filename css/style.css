@@ -2,6 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -34,6 +35,11 @@ header nav {
 .collapse.show {
   width: 100px;
 }
+.navbar .navbar-expand{
+  cursor: pointer;
+}
+
+
 
 @media (min-width: 992px) and (max-width: 1500px) {
   .navbar {
@@ -82,7 +88,7 @@ header nav {
   background-image: url(./../images/7758.jpg);
 }
 
-.hover-text {
+.effect {
   width: 800px;
   height: 400px;
   overflow: hidden;
@@ -90,19 +96,19 @@ header nav {
   cursor: pointer;
   transition: all 300ms;
 }
-.hover-text img {
+.effect img {
   width: 800px;
   height: 400px;
   transition: all 300ms;
 }
-.hover-text:hover {
+.effect:hover {
   box-shadow: 0px 0px 30px -5px black;
 }
-.hover-text:hover img {
+.effect:hover img {
   transform: scale(1.6) rotate(10deg);
 }
 
-.hover-text h1 {
+.effect h1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,11 +121,11 @@ header nav {
   background: black;
   padding: 6px;
 }
-.hover-text:hover h1 {
+.effect:hover h1 {
   transform: translate(-50%, -50%) scale(1);
 }
-.hover-text:before,
-.hover-text:after {
+.effect:before,
+.effect:after {
   content: "";
   width: 800px;
   height: 400px;
@@ -133,16 +139,16 @@ header nav {
   z-index: 1;
 }
 
-.hover-text:before {
+.effect:before {
   transform: rotate(45deg) translateY(-680px) translateX(50px);
 }
-.hover-text:after {
+.effect:after {
   transform: rotate(45deg) translateY(650px) translateX(-80px);
 }
-.hover-text:hover:before {
+.effect:hover:before {
   transform: rotate(45deg) translateY(-250px) translateX(50px);
 }
-.hover-text:hover:after {
+.effect:hover:after {
   transform: rotate(45deg) translateY(230px) translateX(-80px);
 }
 .advice img {
@@ -158,25 +164,43 @@ header nav {
   font-size: 16px;
 }
 
-#tips {
+/* Home 2n section */
+#blog h3, h4{
+  text-align: center;
+}
+#blog .tips{
+  display:flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#blog article {
+  margin:30px;
+}
+#blog img{
+width: 100%;
+max-width:280px;
+}
+
+/* .tips {
   display: flex;
   justify-content: center;
   align-items: baseline;
   text-align: center;
 }
-#tips img {
+.tips img {
   width: 60px;
   height: 60px;
   margin: 20px;
 }
-#tips div {
+.tips div {
   margin: 0px 80px;
 }
 
-#tips h4 {
+.tips h4 {
   font-family: "Tangerine", cursive;
   font-size: 4rem;
-}
+} */
+/* Home 2n section */
 
 /* Pagina de faqs */
 #questions {
