@@ -96,12 +96,13 @@ class Signup {
     //convertir el objeto a un array
     const errorsStringsArr = Object.values(erorsObj);
     errorsStringsArr.forEach((errorStr) => {
-      const errorMessageP = document.createElement("p");
+      const errorMessageDiv = document.createElement("div");
+      errorMessageDiv.classList.add('alert' , 'alert-info')
       // errorMessageP.classList.add or remove
-      errorMessageP.innerHTML = errorStr;
+      errorMessageDiv.innerHTML = errorStr;
 
       //Se pone dentro del DOM- Se añade al div .message-container
-      this.errorsWrapper.appendChild(errorMessageP);
+      this.errorsWrapper.appendChild(errorMessageDiv);
     });
   };
 }

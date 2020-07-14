@@ -31,6 +31,10 @@ header nav {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.collapse.show {
+  width: 100px;
+}
+
 @media (min-width: 992px) and (max-width: 1500px) {
   .navbar {
     height: 100px;
@@ -53,28 +57,95 @@ header nav {
   background-color: rgba(76, 180, 163, 0.7);
 }
 
-.header_text-box {
+/* .header_text-box {
   background-image: url(./../images/faye-cornish-Uq3gTiPlqRo-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 700px;
+} */
+
+.message-container,
+.message-container1 div {
+  font-family: "Merienda One", cursive;
+  font-size: 0.75rem;
 }
 
-.header_text-box p img {
-  width: 35px;
-  height: 35px;
-}
-.message-container,
-.message-container1 p {
-  font-family: "Merienda One", cursive;
-}
 .container-yoga {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+.dashboard{
+  display: flex;
+  justify-content: center;
+  background-image: url(./../images/7758.jpg);
+}
 
+.hover-text {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.hover-text img {
+  width: 800px;
+  height: 400px;
+  transition: all 300ms;
+}
+.hover-text:hover{
+  box-shadow: 0px 0px 30px -5px black;
+}
+.hover-text:hover img{
+  transform: scale(1.6) rotate(10deg);
+}
+
+.hover-text h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: white;
+  font-family: "Merienda One", cursive;
+  z-index: 2;
+  transition: all 700ms cubic-bezier(1,0,0,1);
+  border: 2px solid white;
+  background: black;
+  padding: 6px;
+}
+.hover-text:hover h1{
+  transform: translate(-50%, -50%) scale(1);
+
+}
+.hover-text:before,
+.hover-text:after {
+  content: "";
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.6;
+  transition: all 700ms cubic-bezier(1,0,0,1);
+  border: 4px solid white;
+  z-index: 1;
+}
+
+.hover-text:before {
+  transform: rotate(45deg) translateY(-680px) translateX(50px);
+}
+.hover-text:after {
+  transform: rotate(45deg) translateY(650px) translateX(-80px);
+}
+.hover-text:hover:before{
+  transform: rotate(45deg) translateY(-250px) translateX(50px);
+}
+.hover-text:hover:after {
+  transform: rotate(45deg) translateY(230px) translateX(-80px);
+}  
 .advice img {
   width: 100px;
   height: 100px;
@@ -82,6 +153,7 @@ header nav {
 
 .advice h5 {
   font-size: 26px;
+  font-family: "Merienda One", cursive;
 }
 .advice h6 {
   font-size: 16px;
