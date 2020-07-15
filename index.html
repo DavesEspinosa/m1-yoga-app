@@ -33,8 +33,8 @@
   <body>
     <header>
       <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top"
-        
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: rgb(45, 151, 155);"
       >
         <a class="navbar-brand" href="#"
           ><img class="icon" src="./images/ejercicio.png" alt=""
@@ -50,20 +50,20 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link access active" href="./index.html"
-                >Home <span class="sr-only">(current)</span></a
+              <a class="nav-link access active " href="./index.html"
+                >Home<span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link access" href="./dashboard.html"
-                >Let's Practice
-              </a>
+                >Let's Practice</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link access" href="./faq.html">Stay Healthy</a>
+              <a class="nav-link access " href="./faq.html">Stay Healthy<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a
@@ -78,210 +78,203 @@
         </div>
       </nav>
       <!--Modal: Login / Register Form-->
-      <div
-        class="modal fade"
-        id="modalLRForm"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog cascading-modal" role="document">
-          <!--Content-->
-          <div class="modal-content">
-            <!--Modal cascading tabs-->
-            <div class="modal-c-tabs">
-              <!-- Nav tabs -->
-              <ul
-                class="nav nav-tabs md-tabs tabs-2 light-blue darken-3"
-                role="tablist"
+    <div
+    class="modal fade"
+    id="modalLRForm"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true" >
+    <div class="modal-dialog cascading-modal" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Modal cascading tabs-->
+        <div class="modal-c-tabs">
+          <!-- Nav tabs -->
+          <ul
+            class="nav nav-tabs md-tabs tabs-2 light-blue darken-3"
+            role="tablist"
+          >
+            <li class="nav-item md-form form-sm">
+              <a
+                class="nav-link active"
+                data-toggle="tab"
+                href="#panel7"
+                role="tab"
               >
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    data-toggle="tab"
-                    href="#panel7"
-                    role="tab"
-                  >
-                    <i class="fas fa-handshake mr-1"></i> Don't Hesitate</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-toggle="tab"
-                    href="#panel8"
-                    role="tab"
-                    ><i class="fa fa-users mr-1"></i> You're on the good path</a
-                  >
-                </li>
-              </ul>
+                <i><img src="./images/guru.png" alt="" /></i> Don't Hesitate</a
+              >
+            </li>
+            <li class="nav-item md-form form-sm">
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#panel8"
+                role="tab"
+                ><i><img src="./images/guru.png" alt="" /></i> You're on the good path</a
+              >
+            </li>
+          </ul>
 
-              <!-- Tab panels -->
-              <div class="tab-content">
-                <!--Panel 7-->
-                <div
-                  class="tab-pane fade in show active"
-                  id="panel7"
-                  role="tabpanel"
+          <!-- Tab panels -->
+          <div class="tab-content">
+            <!--Panel 7-->
+            <div
+              class="tab-pane fade in show active"
+              id="panel7"
+              role="tabpanel"
+            >
+              <!--Body-->
+              <div class="modal-body mb-1">
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /></i>
+                  <input
+                    type="email"
+                    id="modalLRInput10"
+                    placeholder="Email"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput10"
+                    >Your email</label
+                  >
+                </div>
+
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /></i>
+                  <input
+                    type="password"
+                    id="modalLRInput11"
+                    placeholder="*****"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput11"
+                    >Your password</label
+                  >
+                </div>
+                <div class="text-center form-sm mt-2">
+                  <button type="submit" class="btn btn-info" id="login">
+                    Log in <i><img src="./images/guru.png" alt="" /></i>
+                  </button>
+                </div>
+                <div class="message-container"></div>
+              </div>
+              <!--Footer-->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-outline-info waves-effect ml-auto"
+                  data-dismiss="modal"
                 >
-                  <!--Body-->
-                  <div class="modal-body mb-1">
-                    <div class="md-form form-sm">
-                      <i class="fas fa-envelope prefix"></i>
-                      <input
-                        type="email"
-                        id="modalLRInput10"
-                        placeholder="Email"
-                        class="form-control form-control-sm validate"
-                      />
-                      <label
-                        data-error="wrong"
-                        data-success="right"
-                        for="modalLRInput10"
-                        >Your email</label
-                      >
-                    </div>
-
-                    <div class="md-form form-sm">
-                      <i class="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        id="modalLRInput11"
-                        placeholder="*****"
-                        class="form-control form-control-sm validate"
-                      />
-                      <label
-                        data-error="wrong"
-                        data-success="right"
-                        for="modalLRInput11"
-                        >Your password</label
-                      >
-                    </div>
-                    <div class="text-center mt-2">
-                      <button type="submit" class="btn btn-info" id="login">
-                        Log in <i class="fas fa-sign-in ml-1"></i>
-                      </button>
-                    </div>
-                    <div class="message-container"></div>
-                  </div>
-                  <!--Footer-->
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-outline-info waves-effect ml-auto"
-                      data-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-                <!--/.Panel 7-->
-
-                <!--Panel 8-->
-                <div class="tab-pane fade" id="panel8" role="tabpanel">
-                  <!--Body-->
-                  <div class="modal-body">
-                    <div class="md-form form-sm">
-                      <i><img src="./images/guru.png" alt="" /> </i>
-                      <input
-                        type="text"
-                        placeholder="Name"
-                        id="modalLRInput12"
-                        class="form-control form-control-sm validate"
-                      />
-                      <label
-                        data-error="wrong"
-                        data-success="right"
-                        for="modalLRInput12"
-                        >Your Name
-                      </label>
-                    </div>
-
-                    <div class="md-form form-sm">
-                      <i class="fas fa-envelope prefix"></i>
-                      <input
-                        type="text"
-                        placeholder="Email"
-                        id="modalLRInput13"
-                        class="form-control form-control-sm validate"
-                      />
-                      <label
-                        data-error="wrong"
-                        data-success="right"
-                        for="modalLRInput13"
-                        >Your email</label
-                      >
-                    </div>
-
-                    <div class="md-form form-sm">
-                      <i class="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        placeholder="****"
-                        id="modalLRInput14"
-                        class="form-control form-control-sm validate"
-                      />
-                      <label
-                        data-error="wrong"
-                        data-success="right"
-                        for="modalLRInput14"
-                        >Your password</label
-                      >
-                    </div>
-
-                    <div class="md-form form-sm">
-                      <i class="fas fa-lock prefix"></i>
-                      <input
-                        type="password"
-                        placeholder="****"
-                        id="modalLRInput15"
-                        class="form-control form-control-sm validate"
-                      />
-                      <label
-                        data-error="wrong"
-                        data-success="right"
-                        for="modalLRInput15"
-                        >Repeat password</label
-                      >
-                    </div>
-
-                    <div class="text-center form-sm mt-2">
-                      <button
-                        type="submit"
-                        class="btn btn-info"
-                        id="signup-button"
-                      >
-                        Sign up <i class="fas fa-sign-in ml-1"></i>
-                      </button>
-                    </div>
-                    <!--Footer-->
-                    <div class="modal-footer">
-                        <div class="message-container1"> </div>
-                      </div>
-                    <div class="modal-footer">
-                      <div class="options text-left">
-                      <p class="pt-1">
-                        Already have an account?
-                        <a href="" class="blue-text">Log In</a>
-                      </p>
-                   </div>
-                    <button
-                      type="button"
-                      class="btn btn-outline-info waves-effect ml-auto"
-                      data-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-                <!--/.Panel 8-->
+                  Close
+                </button>
               </div>
             </div>
+            <!--/.Panel 7-->
+
+            <!--Panel 8-->
+            <div class="tab-pane fade" id="panel8" role="tabpanel">
+              <!--Body-->
+              <div class="modal-body">
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /> </i>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    id="modalLRInput12"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput12"
+                    >Your Name
+                  </label>
+                </div>
+
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /></i>
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    id="modalLRInput13"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput13"
+                    >Your email</label
+                  >
+                </div>
+
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /></i>
+                  <input
+                    type="password"
+                    placeholder="****"
+                    id="modalLRInput14"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput14"
+                    >Your password</label
+                  >
+                </div>
+
+                <div class="md-form form-sm">
+                  <i><img src="./images/guru.png" alt="" /></i>
+                  <input
+                    type="password"
+                    placeholder="****"
+                    id="modalLRInput15"
+                    class="form-control form-control-sm validate"
+                  />
+                  <label
+                    data-error="wrong"
+                    data-success="right"
+                    for="modalLRInput15"
+                    >Repeat password</label
+                  >
+                </div>
+
+                <div class="text-center form-sm mt-2">
+                  <button
+                    type="submit"
+                    class="btn btn-info"
+                    id="signup-button"
+                  >
+                    Sign up <i><img src="./images/guru.png" alt="" /></i>
+                  </button>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <div class="message-container1"> </div>
+                  </div>
+               
+                <button
+                  type="button"
+                  class="btn btn-outline-info waves-effect ml-auto"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            <!--/.Panel 8-->
           </div>
-          <!--/.Content-->
         </div>
       </div>
-      <!--Modal: Login / Register Form-->
+      <!--/.Content-->
+    </div>
+  </div>
     </header>
     <main>
       <!-- carrousel of images -->
@@ -393,81 +386,34 @@
       <!-- Last section, I was thinking to re-direct to let's practice again, wit some  -->
     </main>
     <footer>
-      <section id="last-section">
-        <div>
-          <h5>Follow us</h5>
-          <ul>
-            <li>
-              <a href="http://twitter.com" target="_blank">Twitter</a>
-            </li>
-            <li>
-              <a href="http://facebook.com" target="_blank">Facebook</a>
-            </li>
-            <li>
-              <a href="http://instagram.com" target="_blank">Instagram</a>
-            </li>
-          </ul>
+      <section class="last-section">        
+        <p class="copy">Your Yoga &copy;2020</p>
+        <div class="socials">
+            <a href="http://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="http://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="http://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="http://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
-       <!--  <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div> -->
-        <div>
-          <h4>something about the retirement</4>
-            <div class="container-footer">
-             <iframe class="iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.663771779815!2d2.4324167509966346!3d41.684604379136104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4ccef5d209c21%3A0x61207a6d7ff38346!2sDhamma%20Neru!5e0!3m2!1ses!2ses!4v1594563210118!5m2!1ses!2ses"
-              
-             ></iframe>
-           </div>
-        </div>
-      </section>
-      <section class="mention">
-        Iconos diseñados por
-        <a href="http://www.freepik.com/" title="Freepik">Freepik</a>
-        from
-        <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
-        <a href="http://www.freepik.com"
-          >Designed by Hello-Pixel / Freepik/by user18526052</a
-        >
-      </section>
+    <span class= "mention">Icons designed by
+      <a href="http://www.freepik.com/" title="Freepik">Freepik</a>
+      from
+      <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+      <a href="http://www.freepik.com">Designed by Hello-Pixel / Freepik</a> 
+    </span>
     </footer>
    <!-- Footer -->
 <footer class="page-footer font-small pt-4">
-
-  <!-- Footer Elements -->
   <div class="container">
-
-    <!--Grid row-->
     <div class="row d-flex justify-content-center">
-
-      <!--Grid column-->
       <div class="col-md-6">
-
-        <!-- Video -->
         <div class="embed-responsive embed-responsive-16by9 mb-4">
           <iframe class="iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.663771779815!2d2.4324167509966346!3d41.684604379136104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4ccef5d209c21%3A0x61207a6d7ff38346!2sDhamma%20Neru!5e0!3m2!1ses!2ses!4v1594563210118!5m2!1ses!2ses"
          ></iframe>
         </div>
-
       </div>
-      <!--Grid column-->
-
     </div>
-    <!--Grid row-->
-
   </div>
-  <!-- Footer Elements -->
-
-  
 </footer>
 <!-- Footer -->
  

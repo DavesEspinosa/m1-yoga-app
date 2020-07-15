@@ -1,7 +1,7 @@
 "use strict";
 
 //Variable constante, que no va a cambiar.
-const NUMBER_OF_POSES = 5;
+const NUMBER_OF_POSES = 1;
 
 //Sería mejor traerse los datos del servidor, y luego iterar.
 async function getYogaApi() {
@@ -19,9 +19,8 @@ async function getYogaApi() {
   } catch (err) {}
 }
 
-getYogaApi();
-
 function bringPose(section, data) {
+  section.innerHTML='';
   const article = document.createElement("article");
   article.innerHTML = `
       <img src="${data.img_url}" alt="Keep trying little padawan"/>
@@ -43,6 +42,8 @@ function getRandomPoses(dataArr) {
   }
   return newArr;
 }
+
+/* getYogaApi(); */
 
 /* getYogaApi();
 //Sería mejor traerse los datos del servidor, y luego iterar.
