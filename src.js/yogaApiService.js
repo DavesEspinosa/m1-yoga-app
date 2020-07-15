@@ -3,6 +3,9 @@
 //Variable constante, que no va a cambiar.
 const NUMBER_OF_POSES = 1;
 
+//variable sin valor inicial, la cual lleno con los datos de la api, me devuelve una array(objeto)
+let allPoses = null;
+
 //Sería mejor traerse los datos del servidor, y luego iterar.
 async function getYogaApi() {
   //en el caso de querer un botón, vaciar la section before
@@ -11,12 +14,19 @@ async function getYogaApi() {
   try {
     const response = await fetch(`https://yoga-app-m1.herokuapp.com/yoga`);
     const data = await response.json();
+    allPoses = data;
+    console.log(allPoses);
     const randomPoses = getRandomPoses(data);
     console.log(randomPoses);
     randomPoses.forEach((element) => {
       bringPose(section, element);
     });
   } catch (err) {}
+}
+
+//NUeva función para añadir al buscador.
+function searchPoses(event) {
+  const serchText=  event.currentTarget.value;
 }
 
 function bringPose(section, data) {
@@ -43,7 +53,7 @@ function getRandomPoses(dataArr) {
   return newArr;
 }
 
-/* getYogaApi(); */
+
 
 /* getYogaApi();
 //Sería mejor traerse los datos del servidor, y luego iterar.

@@ -25,15 +25,55 @@ label {
   width: 24px;
   height: 24px;
 }
-.icon {
+/* .icon {
   width: 24px;
   height: 24px;
-}
+} */
+html {
+  /*  background: #000000; */
 
+  animation: fadein 2.5s;
+  -moz-animation: fadein 2.5s; /* Firefox */
+  -webkit-animation: fadein 2.5s; /* Safari and Chrome */
+  -o-animation: fadein 2.5s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 header nav {
-  background-image: url(./../images/74.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: "Fjalla One", sans-serif;
 }
 .collapse.show {
   width: 100px;
@@ -57,16 +97,23 @@ header nav {
   margin: 5px;
   padding: 5px;
 }
+
+/* .carousel-inner .carousel-item img{
+  height: 650px;
+} */
 @media (min-width: 992px) and (max-width: 1500px) {
   .navbar {
-    height: 100px;
+    height: 70px;
   }
+  /*   .carousel-inner .carousel-item {
+  height: 650px;
+}  */
   .icon {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
   }
   .nav-link.access {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
@@ -85,7 +132,8 @@ header nav {
 .message-container,
 .message-container1 div {
   font-family: "Merienda One", cursive;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .container-yoga {
@@ -94,8 +142,14 @@ header nav {
   justify-content: center;
 }
 
+.alert .alert-info {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 /* efecto hoover */
-.dashboard {
+/* .dashboard {
   display: flex;
   justify-content: center;
   background-image: url(./../images/7758.jpg);
@@ -163,7 +217,7 @@ header nav {
 }
 .effect:hover:after {
   transform: rotate(45deg) translateY(230px) translateX(-80px);
-}
+} */
 .advice img {
   width: 100px;
   height: 100px;
@@ -176,13 +230,23 @@ header nav {
 .advice h6 {
   font-size: 16px;
 }
-.button-container {
-  text-align: center;
-}
 
+.button-try {
+  background-image: url(./../images/simon-migaj-Yui5vfKHuzs-unsplash.jpg);
+  background-size: cover;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .button-try img {
   width: 24px;
   height: 24px;
+}
+.button-try button {
+  height: 40px;
+  margin: 198px;
 }
 
 /* Home 2n section */
@@ -197,14 +261,18 @@ h4 {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+#blog article {
+  margin: 20px 40px 90px 40px;
+}
+
+/* Media Queries siempre al final  */
 @media (min-width: 992px) and (max-width: 1500px) {
   #blog article {
     margin: 90px;
   }
 }
-#blog article {
-  margin: 20px 90px 90px 20px;
-}
+
 #blog img {
   width: 100%;
   max-width: 300px;
@@ -306,8 +374,6 @@ footer .last-section {
 .question-container {
   margin-top: 200px;
   display: flex;
-
-  width: 1000px;
   height: 40px;
   color: black;
   font-size: 30px;
@@ -322,11 +388,12 @@ footer .last-section {
   padding-left: 10px;
   animation: change 15s infinite;
 }
-.question-container ul,
-p {
-  margin: 0;
+
+.question-container a {
+  text-decoration: none;
+  color: black;
 }
-.header-faqs {
+/* .header-faqs {
   display: flex;
   justify-content: center;
   background-color: black;
@@ -340,7 +407,7 @@ p {
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px white;
-}
+} */
 @keyframes change {
   0% {
     margin-top: 0;
@@ -387,4 +454,15 @@ p {
   100% {
     margin-top: 0;
   }
+}
+
+.prueba h2 {
+  font-family: "Abril Fatface", cursive;
+  text-transform: uppercase;
+}
+.prueba h3 /* text */ {
+  font-family: "Cormorant", serif;
+}
+.prueba h4 /* mayus */ {
+  font-family: "Fjalla One", sans-serif;
 }

@@ -97,8 +97,9 @@ class Signup {
     const errorsStringsArr = Object.values(erorsObj);
     errorsStringsArr.forEach((errorStr) => {
       const errorMessageDiv = document.createElement("div");
+      //Anadido Alert con boostrap
       errorMessageDiv.classList.add('alert' , 'alert-info')
-      // errorMessageP.classList.add or remove
+      // errorMessageDiv.classList.add or remove
       errorMessageDiv.innerHTML = errorStr;
 
       //Se pone dentro del DOM- Se añade al div .message-container
