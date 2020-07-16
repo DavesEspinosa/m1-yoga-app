@@ -21,7 +21,7 @@
       crossorigin="anonymous"
     />
     <!-- google fonts, importar varias, y luego solamente citarlas en font-family / antes de mi CSS-->
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant&family=Fjalla+One&family=Nanum+Myeongjo&family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant&family=Fjalla+One&family=Nanum+Myeongjo&family=Old+Standard+TT&family=Rammetto+One&display=swap" rel="stylesheet">
 
     <!-- Proper CSS -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -59,13 +59,13 @@
               /></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link access " href="./index.html"
-                >Home</a
+              <a class="nav-link access active" href="./index.html"
+                >Home<span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link access active" href="./dashboard.html"
-                >Let's Practice<span class="sr-only">(current)</span></a
+              <a class="nav-link access" href="./dashboard.html"
+                >Let's Practice</a
               >
             </li>
             <li class="nav-item">
@@ -364,19 +364,25 @@
 
       <!-- tips( images and text, and sign up button) -->
       <section id="blog">
-          <h3>Some text or title, will see</h3>
+        <div class="wave">
+          <p >
+            <span>
+              Inspirational Yoga quotes
+            </span>
+          </p>
+        </div>
         <div class="tips">
           <article>
-            <img src="/images/ejercicio.png" alt="someshit" />
-            <h4>”Yoga adds years to your life”</h4>
+            <img src="/images/meditacion2.png" alt="someshit" />
+            <p>“When you listen to yourself, everything comes naturally. It comes from inside, like a kind of will to do something. Try to be sensitive. That is yoga.”</p>
           </article>
           <article>
-            <img src="/images/guru.png" alt="moreshit" />
-            <h4>”Everyday is a great day for yoga!”</h4>
+            <img src="/images/bienestar.png" alt="moreshit" />
+            <p>”Yoga is the dance of every cell with the music of every breath that creates inner serenity and harmony.” </p>
           </article>
           <article>
-            <img src="/images/meditacion.png" alt="oh man" />
-            <h4>“Yoga is a mirror to look at ourselves”</h4>
+            <img src="/images/rutina-de-ejercicio.png" alt="oh man" />
+            <p>”Yoga is invigoration in relaxation. Freedom in routine. Confidence through self-control. Energy within and energy without.”</p>
           </article>
         </div>
       </section>
@@ -399,21 +405,7 @@
       <a href="http://www.freepik.com">Designed by Hello-Pixel / Freepik</a> 
     </span>
     </footer>
-   <!-- Footer -->
-<footer class="page-footer font-small pt-4">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-6">
-        <div class="embed-responsive embed-responsive-16by9 mb-4">
-          <iframe class="iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.663771779815!2d2.4324167509966346!3d41.684604379136104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4ccef5d209c21%3A0x61207a6d7ff38346!2sDhamma%20Neru!5e0!3m2!1ses!2ses!4v1594563210118!5m2!1ses!2ses"
-         ></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- Footer -->
+
  
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

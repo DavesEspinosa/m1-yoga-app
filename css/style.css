@@ -25,10 +25,10 @@ label {
   width: 24px;
   height: 24px;
 }
-/* .icon {
+.icon {
   width: 24px;
   height: 24px;
-} */
+}
 html {
   /*  background: #000000; */
 
@@ -101,21 +101,6 @@ header nav {
 /* .carousel-inner .carousel-item img{
   height: 650px;
 } */
-@media (min-width: 992px) and (max-width: 1500px) {
-  .navbar {
-    height: 70px;
-  }
-  /*   .carousel-inner .carousel-item {
-  height: 650px;
-}  */
-  .icon {
-    width: 32px;
-    height: 32px;
-  }
-  .nav-link.access {
-    font-size: 20px;
-  }
-}
 
 .modal-content {
   background-color: rgba(76, 180, 163, 0.7);
@@ -250,13 +235,14 @@ header nav {
 }
 
 /* Home 2n section */
-#blog h3,
-h4 {
+#blog h3 {
   text-align: center;
-  font-family: "Tangerine", cursive;
-  font-size: 2rem;
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 40px 0px;
 }
-#blog .tips {
+.tips {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -266,18 +252,18 @@ h4 {
   margin: 20px 40px 90px 40px;
 }
 
-/* Media Queries siempre al final  */
-@media (min-width: 992px) and (max-width: 1500px) {
-  #blog article {
-    margin: 90px;
-  }
-}
-
 #blog img {
   width: 100%;
   max-width: 300px;
 }
-
+.tips p {
+  text-align: center;
+  width: 13em;
+  max-width: 100%;
+  font-family: "Cormorant", serif;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
 /* .tips {
   display: flex;
   justify-content: center;
@@ -299,51 +285,29 @@ h4 {
 } */
 /* Home 2n section */
 
-/* Footer iframe */
-.container-footer {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-}
-/* Then style the iframe to fit in the container div with full height and width */
-.iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
 /* Footer dashboard and faqs*/
-/* #last-section {
-  display: flex;
-  justify-content: space-around;
-  background-image: url(./../images/7758.jpg);
-  background-size: cover;
-} */
 
-footer .last-section {
+.last-section {
+  height: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 25px 0px 0px 0px;
-  margin: 10px;
+  padding: 0px;
+  margin: 10px 0px;
 }
 .copy {
-  font-size: 20px;
+  font-size: 0.85rem;
 }
 .socials {
   width: 100%;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 .socials i {
   color: black;
   text-decoration: none;
   margin: 3px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 }
 .socials span a {
   font-size: 1rem;
@@ -364,25 +328,40 @@ footer .last-section {
 } */
 
 /* Pagina de faqs */
+
 #questions {
-  background-image: url(./../images/74.jpg);
+  background-image: url(./../images/simon-migaj-Yui5vfKHuzs-unsplash.jpg);
   background-size: cover;
-  height: 400px;
+  background-position: 50%;
+  height: 580px;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  /* display: flex;
+  justify-content: center; */
+}
+#questions:before {
+  content: "";
+  width: 100%;
+  height: 580px;
+  background-color: teal;
+  position: absolute;
+  opacity: 0.6;
 }
 .question-container {
-  margin-top: 200px;
+  /* margin-top: 275px; */
   display: flex;
   height: 40px;
-  color: black;
+  color: white;
   font-size: 30px;
   /* cuando el texto sube, encaja perfectamente con el container  */
   line-height: 40px;
   position: absolute;
-
   overflow: hidden;
 }
+
 .question-container ul {
   list-style: none;
   padding-left: 10px;
@@ -391,8 +370,9 @@ footer .last-section {
 
 .question-container a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
+
 /* .header-faqs {
   display: flex;
   justify-content: center;
@@ -465,4 +445,77 @@ footer .last-section {
 }
 .prueba h4 /* mayus */ {
   font-family: "Fjalla One", sans-serif;
+}
+
+/* Media Queries siempre al final  */
+@media (min-width: 992px) and (max-width: 1500px) {
+  #blog article {
+    margin: 70px 70px 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1500px) {
+  .navbar {
+    height: 70px;
+  }
+  /*   .carousel-inner .carousel-item {
+  height: 650px;
+}  */
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .nav-link.access {
+    font-size: 20px;
+  }
+}
+
+.wave {
+  text-align: center;
+  margin: 0;
+}
+
+.wave p {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  display: inline-block;
+
+  padding: 1.5em 0em;
+
+  /* top: 18%;
+	left: 50%;
+	width: 40em;
+  margin: 0 0 0 -20em; */
+}
+
+.wave span {
+  font: 700 3em/1 "Rammetto One", cursive;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+  /* Clip Background Image */
+
+  background: url(./../images/pawel-czerwinski-3k9PGKWt7ik-unsplash.jpg)
+    repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Animate Background Image */
+
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+}
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
