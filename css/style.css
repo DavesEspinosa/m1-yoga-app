@@ -2,7 +2,6 @@ body,
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -121,11 +120,13 @@ header nav {
   text-align: center;
 }
 
-.container-yoga {
+/* donde iba a ir lo que saco de la API, wait for it, a ver que hacemos */
+
+/* .container-yoga {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */
 
 .alert .alert-info {
   display: flex;
@@ -203,19 +204,29 @@ header nav {
 .effect:hover:after {
   transform: rotate(45deg) translateY(230px) translateX(-80px);
 } */
-.advice img {
-  width: 100px;
-  height: 100px;
+
+
+/* Let's practice mate */
+.embed-responsive-4by3::before{
+  padding-top: 55%;
 }
 
-.advice h5 {
-  font-size: 26px;
+.embed-responsive-item {
+ display: flex;
+ justify-content: center;
+ text-align: center;
+}
+.advice img {
+  width: 20em;
+  
+}
+.advice p {
+  font-size: 100%;
   font-family: "Merienda One", cursive;
 }
-.advice h6 {
+.advice span {
   font-size: 16px;
-}
-
+} 
 .button-try {
   background-image: url(./../images/simon-migaj-Yui5vfKHuzs-unsplash.jpg);
   background-size: cover;
@@ -233,6 +244,41 @@ header nav {
   height: 40px;
   margin: 198px;
 }
+.prueba {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.prueba p,h4{
+text-align: center;
+width: 50%;
+margin: 1em 2em 1em;
+}
+.prueba h4{
+  font-size: 2em;
+}
+@media (min-width: 300px) and (max-width: 992px) {
+  .embed-responsive-4by3::before{
+    padding-top: 80%;
+  }
+  .advice img {
+    width: 15em;
+    
+  }
+  .prueba p,h4{
+    text-align: center;
+    width: 75%;
+    margin: 1em 2em 1em;
+    }
+}
+.form-control{
+  background-color: white;
+}
+.searcher{
+  text-align: center;
+  padding: 2em;
+}
+/* Let's practice mate */
 
 /* Home 2n section */
 #blog h3 {
@@ -519,3 +565,4 @@ header nav {
     background-position: 100% 50%;
   }
 }
+

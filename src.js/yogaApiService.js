@@ -34,8 +34,8 @@ function bringPose(section, data) {
   const article = document.createElement("article");
   article.innerHTML = `
       <img src="${data.img_url}" alt="Keep trying little padawan"/>
-      <h5>${data.english_name}</h5>
-      <h6>${data.sanskrit_name}</h6>
+      <p>${data.english_name}</p>
+      <p>${data.sanskrit_name}<p>
     `;
   //not sure if is list or section
   section.appendChild(article);

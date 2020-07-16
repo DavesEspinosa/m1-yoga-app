@@ -277,41 +277,52 @@
   </div>
     </header>
     <main>
-      <!-- background image with some message -->
-      <section class="dashboard">
-        <div class="effect">
-          <h1 onclick= "getYogaApi()">WHAT WE CAN DO TODAY...</h1>
-    
-          <!-- <p>
-          We will show you how to start. we selected 1 pose to do each day
-          during 5 days. Give us an opportunity, and try your limits
-        </p> -->
-        </div>
-      </section>
-      <!-- Selected one pose each day, during 5, I'll do 3 sections, 2 with a couple of divs, another with 1 div -->
-      <section class="container-yoga">
-        <div class="advice">
-          <!-- the new articles will come here, with image, two title, and a button to mark if it's done or not -->
-          <!-- <article>
-               <img src="" alt="Keep trying little padawan!"/>
-               <h5>Enlgish name</h5>
-               <h6>Sanskrit name</h6>
-               <button></button> or <i></i> 
-           </article> -->
-        </div>
-      </section>
-        <div class= "prueba">
-         
-          <h3>clicke her motherfucker hemos estado cogiendo unas lindas fruititas para tomarlas y </h3>
-          <h4>clicke her motherfucker hemos estado cogiendo unas lindas fruititas para tomarlas y </h4>
-         
-        </div>
-        
-
-      <div class= "button-try">
-       <button  onclick= "getYogaApi()" type="button">LET'S TRY AGAIN <img src="/images/meditacion.png" alt=""> </button>
+      <div class= "prueba">
+        <h4>clicke her motherfucker hemos estado cogiendo unas lindas fruititas para tomarlas y </h4>
+        <p>Yoga practice can make us more and more sensitive to subtler and subtler sensations in the body. Paying attention to and staying with finer and finer sensations within the body is one of the surest ways to steady the wandering mind. </p>
       </div>
-    </main>
+      <div class= "button-try">
+       <button  onclick= "getYogaApi()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalYT">LET'S TRY AGAIN <img src="/images/meditacion.png" alt=""> </button>
+      </div>
+<!--Modal: modalYT-->
+<!-- tabindex, hace que únicamente sea navegable con el teclado en el modal emergente// Almost same shit with role-->
+     <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="false">
+       <div class="modal-dialog modal-lg" role="document">
+       <!--Content-->
+        <div class="modal-content">
+         <!--Body-->
+         <div class="modal-body mb-0 p-0" >
+          <div class="embed-responsive embed-responsive-4by3 z-depth-1-half">
+            <object class=" embed-responsive-item advice">
+                <!-- the new articles will come here, with image, two title, and a button to mark if it's done or not -->
+                <!-- <article>
+                     <img src="" alt="Keep trying little padawan!"/>
+                     <h5>Enlgish name</h5>
+                     <h6>Sanskrit name</h6>
+                     <button></button> or <i></i> 
+                 </article> -->
+            </object>
+          </div>
+        </div>
+           <!--Footer-->
+           <div class="modal-footer justify-content-center ">
+            <span class="mr-4">Spread the word!</span>
+          </div>
+       </div>
+      </div>
+     </div>
+<!-- Search form -->
+<div class ="searcher">
+    <p>Put the exactly name of the posture you're looking for... and press ENTER</p>
+</div>
+   <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+    <input class=" form-control mr-3 w-75" type="text" placeholder="Search"
+      aria-label="Search">
+    <i class="fas fa-search" aria-hidden="false"></i>
+     </form>
+   
+</main>
     <footer>
       <section class="last-section">        
           <p class="copy">Your Yoga &copy;2020</p>
