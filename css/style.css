@@ -275,8 +275,13 @@ margin: 1em 2em 1em;
   background-color: white;
 }
 .searcher{
+  display: flex;
+  justify-content: center;
+  padding: 2em 0em 0em;
   text-align: center;
-  padding: 2em;
+}
+.mt-2{
+  padding-bottom: 2em;
 }
 /* Let's practice mate */
 
