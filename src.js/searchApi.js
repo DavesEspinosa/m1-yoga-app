@@ -2,10 +2,12 @@
 
 const listContainer = document.querySelector("#list-container");
 const searchInput = document.querySelector("#searcher");
+/* const modalArticle = document.querySelector(".advice") */
 let data = [];
 let input = "";
 
 async function getData() {
+	
   try {
     const response = await fetch(`https://yoga-app-m1.herokuapp.com/yoga`);
     const data = await response.json();
@@ -26,7 +28,7 @@ function insertListRows(rows) {
 
 function onSearch(ev) {
   input = ev.target.value;
-  listContainer.innerHTML = "";
+ 
 
   if (!input) {
     return insertListRows([]);
@@ -40,24 +42,55 @@ function onSearch(ev) {
 }
 
 function onEnterPress(ev) {
+
   if (ev.code !== "Enter") return;
 
-  event.preventDefault();
+  ev.preventDefault();
 
   const searchModal = document.createElement("div");
-	searchModal.classList = "modal-body";
-  const searchedElement = JSON.stringify(
-    data.find((el) =>
-      el.english_name.toLowerCase().includes(input.toLowerCase())
-    )
+  searchModal.classList = "chosen-pose";
+  const searchedElement = data.find((el) =>
+    el.english_name.toLowerCase().includes(input.toLowerCase())
   );
-  console.log(searchedElement);
-	searchModal.innerHTML = searchedElement;
-	document.body.appendChild(searchModal);
-}
+	
+	
+  searchModal.innerHTML = `
 
+ <img src="${searchedElement.img_url}" alt="Keep trying little padawan"/>
+      <p>${searchedElement.english_name}</p>
+      <p>${searchedElement.sanskrit_name}<p>
+    `;
+  document.appendChild(searchedElement);
+}
+/* 
+function onEnterPress(ev) {
+  if (ev.code !== "Enter") return;
+
+  ev.preventDefault();
+
+  const searchModal = document.createElement("article");
+
+  const searchedElement = data.find((el) =>
+    el.english_name.toLowerCase().includes(input.toLowerCase())
+  );
+
+  searchModal.innerHTML = `
+
+	<img src="${searchedElement.img_url}" alt="Keep trying little padawan"/>
+			 <p>${searchedElement.english_name}</p>
+			 <p>${searchedElement.sanskrit_name}<p>
+		 `;
+
+  
+ 
+  document.appendChild(searchModal);
+}
+ */
 window.onload = async () => {
   searchInput.addEventListener("keydown", onSearch);
   document.addEventListener("keydown", onEnterPress);
+
   data = await getData();
 };
+
+//Esta borrando el desplegable solo cuando doy un ultimo borrar

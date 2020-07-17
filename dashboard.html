@@ -313,15 +313,16 @@
       </div>
      </div>
 <!-- Search form -->
-<div class ="searcher">
+<div class ="text-search">
     <p>Put the exactly name of the posture you're looking for... and press ENTER</p>
 </div>
-   <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
-    <input class=" form-control mr-3 w-75" type="text" placeholder="Search"
+<div class="chosen-pose"></div>
+   <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 ">
+    <input id="searcher"  class=" form-control mr-3 w-75" type="text" placeholder="Search"
       aria-label="Search">
     <i class="fas fa-search" aria-hidden="false"></i>
      </form>
-   
+     <div id="list-container"></div>
 </main>
     <footer>
       <section class="last-section">        
@@ -361,6 +362,6 @@
     <script src="./src.js/Signup.js"></script>
     <script src="./src.js/User.js"></script>
     <script src="./src.js/Validator.js"></script>
-    <script src="./src.js/searchApi.js"></script>
+  <!--   <script src="./src.js/searchApi.js"></script> -->
   </body>
 </html>

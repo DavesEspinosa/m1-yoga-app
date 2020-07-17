@@ -3,16 +3,14 @@ html {
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .modal-c-tabs .nav {
   display: flex;
   justify-content: center;
 }
-.form-control {
-  background-color: rgba(112, 147, 182, 0.7);
-}
+  .form-control {
+    background-color: rgba(112, 147, 182, 0.7);
+  }
 label {
   font-family: "Merienda One", cursive;
 }
@@ -82,7 +80,7 @@ header nav {
 }
 
 .modal-content .nav-link {
-  background-color: rgba(112, 147, 182, 0.7);
+ 
   color: black;
 }
 .btn-outline-info {
@@ -102,7 +100,7 @@ header nav {
 } */
 
 .modal-content {
-  background-color: rgba(76, 180, 163, 0.7);
+ background-image: url(./../images/74.jpg);
 }
 
 /* .header_text-box {
@@ -343,7 +341,7 @@ margin: 1em 2em 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0px;
+  padding: 1em 0em 0em 0em;
   margin: 10px 0px;
 }
 .copy {
@@ -368,6 +366,7 @@ margin: 1em 2em 1em;
 .mention a {
   font-size: 10px;
   color: rgba(112, 147, 182, 0.7);
+  text-align: center;
 }
 
 /* Footer home */
@@ -494,7 +493,7 @@ margin: 1em 2em 1em;
 .prueba h3 /* text */ {
   font-family: "Cormorant", serif;
 }
-.prueba h4 /* mayus */ {
+.prueba h4/* mayus */ {
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -571,3 +570,31 @@ margin: 1em 2em 1em;
   }
 }
 
+.text-search p{
+  font-family: "Fjalla One", sans-serif;
+  text-align: center;
+  padding: 2em 0em 0em 0em;
+}
+
+#list-container div{
+  display: flex;
+  flex-wrap: wrap;
+padding-left: 12%;
+font-family: "Cormorant", serif;
+}
+
+.btn-info{
+  color: black;
+  background-color: white;
+}
+.chosen-pose{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.chose img{
+  width: 80%;
+  height: 80%;
+}
