@@ -14,6 +14,7 @@ async function getYogaApi() {
   try {
     const response = await fetch(`https://yoga-app-m1.herokuapp.com/yoga`);
     const data = await response.json();
+    
     allPoses = data;
     console.log(allPoses);
     const randomPoses = getRandomPoses(data);
@@ -24,18 +25,15 @@ async function getYogaApi() {
   } catch (err) {}
 }
 
-//NUeva función para añadir al buscador.
-function searchPoses(event) {
-  const serchText=  event.currentTarget.value;
-}
 
 function bringPose(section, data) {
   section.innerHTML='';
   const article = document.createElement("article");
   article.innerHTML = `
-      <img src="${data.img_url}" alt="Keep trying little padawan"/>
-      <h5>${data.english_name}</h5>
-      <h6>${data.sanskrit_name}</h6>
+
+ <img src="${data.img_url}" alt="Keep trying little padawan"/>
+      <p>${data.english_name}</p>
+      <p>${data.sanskrit_name}<p>
     `;
   //not sure if is list or section
   section.appendChild(article);
@@ -54,95 +52,84 @@ function getRandomPoses(dataArr) {
 }
 
 
+const listContainer = document.querySelector("#list-container");
+const searchInput = document.querySelector("#searcher");
+let data = [];
+let input = "";
 
-/* getYogaApi();
-//Sería mejor traerse los datos del servidor, y luego iterar.
-async function getYogaApi() {
-  const section = document.querySelector(".advice");
-
-  for (let i = 0; i < 6; i++) {
-    try {
-      const response = await fetch(
-        `https://yoga-app-m1.herokuapp.com/yoga/${i + 1}`
-      );
-      const data = await response.json();
-
-      const article = document.createElement("article");
-      article.innerHTML = `
-          <img src="${data.img_url}" alt="Keep trying little padawan"/>
-          <h5>${data.english_name}</h5>
-          <h6>${data.sanskrit_name}</h6>
-        `;
-
-      section.appendChild(article);
-    } catch (err) {}
-  }
-}
-
-getYogaApi(); */
-
-/* const section = document.querySelector(".advice");
-
-async function getYogaApi() {
+async function getData() {
   try {
     const response = await fetch(`https://yoga-app-m1.herokuapp.com/yoga`);
-    const promise = await response.json();
-    const postures = promise.data;
-
-    for (let i = 0; i < 6; i++) {
-      randomId = Math.floor(Math.random() * postures.length);
-      let posture = postures[randomId];
-      newRandomPose(article, data);
-      postures.splice()
-     
-    }
-    console.log(postures);
-    return postures;
-  } catch (err) {}
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error("ERROR DOWNLOADING YOGA DATA", err);
+    return [];
+  }
 }
-console.log(getYogaApi()); */
 
-/* let createPosture = (yoga) => {
-  let article = document.createElement("article");
-  article.innerHTML = `
-  <img src="${yoga.img_url}" alt="Keep trying little padawan"/>
-  <h5>${yoga.english_name}</h5>
-  <h6>${yoga.sanskrit_name}</h6>
-`;
+function insertListRows(rows) {
+  rows.forEach((row) => {
+    const rowDOM = document.createElement("div");
+    rowDOM.innerHTML = row.english_name;
+    listContainer.appendChild(rowDOM);
+  });
+}
 
-  section.appendChild(article);
-};
+function onSearch(ev) {
+  input = ev.target.value;
+  listContainer.innerHTML = "";
 
-let randomYogaApi = async () => {
-  const response = await fetch(`https://yoga-app-m1.herokuapp.com/yoga`);
-  let jason = await response.json();
-  let yogaArr = jason.data;
-
-  for (let i = 0; i < 6; i++) {
-    randomNumber = Math.floor(Math.random() * yogaArr.length);
-    let yoga = yogaArr[randomNumber];
-    createPosture(yoga);
-    yogaArr.splice(randomNumber, 1);
+  if (!input) {
+    return insertListRows([]);
   }
-}; */
 
-//let i = Math.floor(Math.random()*45)
+  const filteredData = data.filter(function (el) {
+    return el.english_name.toLowerCase().includes(input.toLowerCase());
+  });
 
-//randomYogaApi();
+  insertListRows(filteredData);
+}
+//No está bien, faltaría darle una vuelta, no puede ser que tenga que seleccionar la clase, o si.
+function onEnterPress(ev) {
+  if (ev.code !== "Enter") return;
 
-//To select a beer as a favorite:
+  event.preventDefault();
+  document.querySelector(".chosen-pose ").innerHTML='';
+  const searchModal = document.createElement("article");
+	searchModal.classList = "chose";
+  const searchedElement = 
+    data.find((el) =>
+      el.english_name.toLowerCase().includes(input.toLowerCase())
+  );
+  searchModal.innerHTML = `
 
-//el problema es que las estrellas de favorito nacen de una función asincrona.
-/* 
-let update = () => {
-  let starArray = [...document.querySelectorAll(".fa-star")];
+  <img src="${searchedElement.img_url}" alt="Keep trying little padawan"/>
+       <h3>${searchedElement.english_name}</h3>
+     `;
+	document.querySelector(".chosen-pose ").appendChild(searchModal);
+}
 
-  for (i = 0; i < starArray.length; i++) {
-    starArray[i].addEventListener("click", toggle2);
-  }
-};
+/* function onEnterPress(ev) {
+  if (ev.code !== "Enter") return;
 
-function toggle2(event) {
-  event.currentTarget.classList.toggle("favorite");
+  event.preventDefault();
+
+  const searchModal = document.createElement("div");
+	searchModal.classList = "modal-body";
+  const searchedElement = JSON.stringify(
+    data.find((el) =>
+      el.english_name.toLowerCase().includes(input.toLowerCase())
+    )
+  );
+  console.log(searchedElement);
+	searchModal.innerHTML = searchedElement;
+	document.querySelector(".text-search ").appendChild(searchModal);
 }
  */
+
+window.onload = async () => {
+  searchInput.addEventListener("keydown", onSearch);
+  document.addEventListener("keydown", onEnterPress);
+  data = await getData();
+};
