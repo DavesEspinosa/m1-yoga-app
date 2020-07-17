@@ -8,11 +8,10 @@ html {
   display: flex;
   justify-content: center;
 }
-  .form-control {
-    background-color: rgba(112, 147, 182, 0.7);
-  }
+
 label {
-  font-family: "Merienda One", cursive;
+  font-family: "Cormorant", serif;
+  font-size: 1rem;
 }
 .md-form img {
   width: 24px;
@@ -80,7 +79,6 @@ header nav {
 }
 
 .modal-content .nav-link {
- 
   color: black;
 }
 .btn-outline-info {
@@ -100,9 +98,8 @@ header nav {
 } */
 
 .modal-content {
- background-image: url(./../images/74.jpg);
+  background-color: rgba(243, 251, 249, 0.7);
 }
-
 /* .header_text-box {
   background-image: url(./../images/faye-cornish-Uq3gTiPlqRo-unsplash.jpg);
   background-size: cover;
@@ -113,8 +110,8 @@ header nav {
 
 .message-container,
 .message-container1 div {
-  font-family: "Merienda One", cursive;
-  font-size: 0.85rem;
+  font-family: "Cormorant", serif;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -203,41 +200,37 @@ header nav {
   transform: rotate(45deg) translateY(230px) translateX(-80px);
 } */
 
-
 /* Let's practice mate */
-.embed-responsive-4by3::before{
+.embed-responsive-4by3::before {
   padding-top: 55%;
 }
 
 .embed-responsive-item {
- display: flex;
- justify-content: center;
- text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .advice img {
   width: 20em;
-  
 }
 .advice p {
   font-size: 100%;
-  font-family: "Merienda One", cursive;
+  font-family: "Fjalla One", sans-serif;
 }
 .advice span {
   font-size: 16px;
-} 
+}
 .button-try {
-  background-image: url(./../images/simon-migaj-Yui5vfKHuzs-unsplash.jpg);
+  background-image: url(./../images/5061.jpg);
   background-size: cover;
-  height: 400px;
+
+  height: 500px;
 
   display: flex;
   justify-content: center;
   align-content: center;
 }
-.button-try img {
-  width: 24px;
-  height: 24px;
-}
+
 .button-try button {
   height: 40px;
   margin: 198px;
@@ -247,38 +240,28 @@ header nav {
   justify-content: center;
   flex-wrap: wrap;
 }
-.prueba p,h4{
-text-align: center;
-width: 50%;
-margin: 1em 2em 1em;
+.prueba p,
+h4 {
+  text-align: center;
+  width: 68%;
+  margin: 2em;
+  font-size: 1.3em;
 }
-.prueba h4{
+.prueba h4 {
   font-size: 2em;
 }
-@media (min-width: 300px) and (max-width: 992px) {
-  .embed-responsive-4by3::before{
-    padding-top: 80%;
-  }
-  .advice img {
-    width: 15em;
-    
-  }
-  .prueba p,h4{
-    text-align: center;
-    width: 75%;
-    margin: 1em 2em 1em;
-    }
-}
-.form-control{
+
+.form-control {
   background-color: white;
+  font-family: "Cormorant", serif;
 }
-.searcher{
+.searcher {
   display: flex;
   justify-content: center;
   padding: 2em 0em 0em;
   text-align: center;
 }
-.mt-2{
+.mt-2 {
   padding-bottom: 2em;
 }
 /* Let's practice mate */
@@ -367,6 +350,7 @@ margin: 1em 2em 1em;
   font-size: 10px;
   color: rgba(112, 147, 182, 0.7);
   text-align: center;
+  padding-bottom: 10px;
 }
 
 /* Footer home */
@@ -389,6 +373,7 @@ margin: 1em 2em 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   /* display: flex;
   justify-content: center; */
 }
@@ -405,11 +390,15 @@ margin: 1em 2em 1em;
   display: flex;
   height: 40px;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   /* cuando el texto sube, encaja perfectamente con el container  */
   line-height: 40px;
   position: absolute;
   overflow: hidden;
+  flex-wrap: wrap;
+  width: 80%;
+  font-size: 2em;
+  justify-content: center;
 }
 
 .question-container ul {
@@ -486,10 +475,6 @@ margin: 1em 2em 1em;
   }
 }
 
-.prueba h2 {
-  font-family: "Abril Fatface", cursive;
-  text-transform: uppercase;
-}
 .prueba h3 /* text */ {
   font-family: "Cormorant", serif;
 }
@@ -538,12 +523,14 @@ margin: 1em 2em 1em;
 }
 
 .wave span {
-  font: 700 3em/1 "Rammetto One", cursive;
+  font: 700 2.5em/1 "Fjalla One", sans-serif;
   letter-spacing: 0;
   padding: 0.25em 0 0.325em;
   display: block;
+  flex-wrap: wrap;
   margin: 0 auto;
   text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  padding: 40px 10px 0px;
 
   /* Clip Background Image */
 
@@ -570,31 +557,140 @@ margin: 1em 2em 1em;
   }
 }
 
-.text-search p{
+.text-search p {
   font-family: "Fjalla One", sans-serif;
   text-align: center;
   padding: 2em 0em 0em 0em;
+  font-size: 1em;
 }
 
-#list-container div{
+#list-container div {
   display: flex;
   flex-wrap: wrap;
-padding-left: 12%;
-font-family: "Cormorant", serif;
+  padding-left: 12%;
+  font-family: "Cormorant", serif;
 }
 
-.btn-info{
+.btn-info {
   color: black;
   background-color: white;
 }
-.chosen-pose{
+.chosen-pose {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
   margin-bottom: 1em;
 }
-.chose img{
+.chose img {
   width: 80%;
   height: 80%;
+}
+.chose {
+  border: 1px dotted grey;
+  padding: 5px 10px 15px;
+  box-shadow: 5px 10px rgb(170, 162, 162);
+}
+.chose h3 {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.mr-4 {
+  font-family: "Cormorant", serif;
+  font-size: 2rem;
+}
+
+@media (min-width: 300px) and (max-width: 425px) {
+  .mr-4 {
+    font-family: "Cormorant", serif;
+    font-size: 0.85rem;
+  }
+  .advice p {
+    font-size: 1rem;
+  }
+  .advice img {
+    width: 10em;
+  }
+}
+@media (min-width: 680px) and (max-width: 920px) {
+  .question-container ul {
+    list-style: none;
+    animation: change 15s infinite;
+    font-size: 80%;
+  }
+
+  .question-container p {
+    font-size: 80%;
+  }
+  .question-container {
+    width: 90%;
+  }
+}
+@media (min-width: 570px) and (max-width: 680px) {
+  .question-container ul {
+    list-style: none;
+    animation: change 15s infinite;
+    font-size: 70%;
+  }
+
+  .question-container p {
+    font-size: 70%;
+  }
+  .question-container {
+    width: 90%;
+  }
+}
+@media (min-width: 400px) and (max-width: 570px) {
+  .question-container ul {
+    list-style: none;
+    animation: change 15s infinite;
+    font-size: 50%;
+  }
+
+  .question-container p {
+    font-size: 50%;
+  }
+  .question-container {
+    width: 90%;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  .question-container ul {
+    list-style: none;
+    animation: change 15s infinite;
+    font-size: 38%;
+  }
+
+  .question-container p {
+    font-size: 38%;
+  }
+  .question-container {
+    width: 90%;
+  }
+}
+@media (min-width: 300px) and (max-width: 992px) {
+  .embed-responsive-4by3::before {
+    padding-top: 80%;
+  }
+  .advice img {
+    width: 15em;
+  }
+  .prueba p,
+  h4 {
+    text-align: center;
+    width: 85%;
+    margin: 1em 2em 2em;
+  }
+}
+@media (min-width: 300px) and (max-width: 425px) {
+  .mr-4 {
+    font-family: "Cormorant", serif;
+    font-size: 0.85rem;
+  }
+  .advice p {
+    font-size: 1rem;
+  }
+  .advice img {
+    width: 10em;
+  }
 }
